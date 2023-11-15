@@ -1,0 +1,43 @@
+<div class="container">
+  <form [formGroup]="form">
+    <label for="id">ID:</label>
+    <input type="text" id="id" name="id" formControlName="id" />
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" formControlName="name" />
+
+    <label for="descripcion">Descripción:</label>
+    <input
+      type="text"
+      id="descripcion"
+      name="descripcion"
+      formControlName="description"
+    />
+
+    <label for="logo">Logo:</label>
+    <input type="text" id="logo" name="logo" formControlName="logo" />
+
+    <label for="fecha-liberacion">Fecha de Liberación:</label>
+    <input
+      type="date"
+      id="fecha-liberacion"
+      name="fecha-liberacion"
+      formControlName="date_release"
+    />
+
+    <label for="fecha-revision">Fecha de Revisión:</label>
+    <input
+      type="date"
+      id="fecha-revision"
+      name="fecha-revision"
+      formControlName="date_revision"
+    />
+
+    <div class="btn-container">
+      <button type="button" class="btn-none">Revisar</button>
+      <button type="button" class="btn-success" (click)="create()">
+        Enviar
+      </button>
+    </div>
+  </form>
+</div>

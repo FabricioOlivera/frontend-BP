@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="container-left">
+    <button (click)="addNavigate()">Agregar</button>
+  </div>
+  <div class="container-table">
+  <table *ngIf="allProducts$ | async as products; else loading">
+    <thead>
+      <tr>
+        <th>Logo</th>
+        <th>Nombre del producto</th>
+        <th>Descripción</th>
+        <th>Fecha de Liberacion</th>
+        <th>Fecha de reestructuración</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>
+          <img [src]="product.logo" alt="logo_image" />
+        </td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.date_release | date : "d/MM/yyyy" }}</td>
+        <td>{{ product.date_revision | date : "d/MM/yyyy" }}</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <p>{{ products.length }} Resultados</p>
+    </tfoot>
+  </table>
+</div>
+
+  <ng-template #loading>
+    <p>cargando...</p>
+  </ng-template>
+</div>

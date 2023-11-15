@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  font-family: "Inconsolata", monospace;
+}
+
+.btn-success {
+  background-color: #4caf50;
+}
+
+.btn-success:hover {
+  background-color: #4caf50;
+}
+
+.btn-none {
+  background-color: #686969;
+}
+
+.btn-none:hover {
+  background-color: #656565;
+}
